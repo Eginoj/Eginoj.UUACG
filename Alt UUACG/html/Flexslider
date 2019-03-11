@@ -1,0 +1,23 @@
+		   
+		   <div class="flexslider">
+			
+				<ul class="slides">
+					
+					<li>
+						<figure>
+							<img src="../images/UUFront.jpg"/>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<img src="../images/UUCity.jpg"/>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<img src="../images/UUsign.jpg"/>
+						</figure>
+					</li>
+				</ul><!--end slides-->
+			
+		   </div><!--end flexslider-->

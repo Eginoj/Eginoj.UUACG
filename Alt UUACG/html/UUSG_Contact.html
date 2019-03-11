@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>UUACG</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="../stylesheets/base.css">
+	<link rel="stylesheet" href="../stylesheets/skeleton.css">
+	<link rel="stylesheet" href="../stylesheets/layout.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="http://egj3.com/favicon.ico?">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+</head>
+<body>
+
+        <div class="bands header">
+
+	  <header class="container">
+		
+		<div class="sixteen columns">
+			
+			<h1 class="logo"><a href="">UUSG</a></h1>
+
+		</div>
+	
+	   </header><!-- end container-->
+	
+	</div><!-- end band-->	
+		
+	<div class="bands navigation">
+
+	  <nav class="container primary">
+		
+		<div class="sixteen columns">
+
+<input type="checkbox" id="nav">
+<label for="nav"></label>
+			
+			<ul>
+				<li><a href="index.htm">Home</a></li>
+				
+				<li><a href="UUSG_AboutUs.html">About Us</a>
+				   
+				     <ul>
+					<li><a href="unitarianuniversalism.html"><span>- </span>WHAT IS UNITERIAN UNIVERSALISM?</a></li>
+					<li><a href="UUSG_History.html"><span>- </span>OUR HISTORY</a></li>
+					<li><a href="UUSG_Minister.html"><span>- </span>OUR MINISTRY</a></li>
+					
+				     </ul>
+				
+				</li>
+				
+				<li><a href="newcomers.html">New Comers</a></li>
+				
+				<li><a href="UUSG_GetInvolv.html">Get Involved</a>
+				
+				     <ul>
+					<li><a href="UUSG_Youth.html"><span>- </span>CHILDREN &#x2F YOUTH</a></li>
+					<li><a href="#"><span>- </span>LIVE SUSTAINABLY</a></li>
+				     </ul>
+				
+				
+				</li>
+				
+				<li><a href="UUSG_Calendar.html">Calendar</a></li>
+				
+				<li><a href="contactus.html">Contact Us</a>
+				
+				     <ul>
+					<li><a href="drivingdirections.html"><span>- </span>DIRECTIONS</a></li>
+					<li><a href="UUSG_Officers.html"><span>- </span>CHURCH OFFICERS</a></li>
+					<li><a href="http://simplebooklet.com/uucgmembers"><span>- </span>UUACG membership directory</a></li>
+				     </ul>
+				
+				</li>   
+				
+			</ul>
+
+		</div>
+	
+	   </nav><!-- end container-->
+	
+	</div><!-- end band-->
+	
+	<div class="bands">
+
+	  <div class="container">
+		
+		<div class="sixteen columns">
+		   
+		   <div class="ContactPic">
+			
+						<figure>
+							<img src="../images/ContactPic.jpg"/>
+						</figure>
+		   </div><!--end What is-->
+              
+		</div><!--end sixteen-->
+
+		
+		<div class="eight columns">
+			
+		   <h3>How to Reach Us</h3>
+		   
+		   <p><strong>Unitarian Universalists of Coastal Georgia</strong><br>
+			P.O. Box 1056<br>
+			Brunswick, GA 31521<br>
+			Phone&#58; (912) 265-9424<br>
+			<a title="" href="mailto:uucoastalga@gmail.com" target="_self">Email: uucoastalga@gmail.com</a><br>
+			(Our church building is located at <br>1710 Gloucester Street, Brunswick, GA 31520)</p>
+		
+
+		</div><!--end eight-->
+		
+		<div class="eight columns">
+
+<?php
+// define variables and set to empty values
+$nameErr = $emailErr = $genderErr = $websiteErr = "";
+$name = $email = $gender = $comment = $website = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+   if (empty($_POST["name"])) {
+     $nameErr = "Name is required";
+   } else {
+     $name = test_input($_POST["name"]);
+     // check if name only contains letters and whitespace
+     if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+       $nameErr = "Only letters and white space allowed";
+     }
+   }
+  
+   if (empty($_POST["email"])) {
+     $emailErr = "Email is required";
+   } else {
+     $email = test_input($_POST["email"]);
+     // check if e-mail address syntax is valid
+     if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$email)) {
+       $emailErr = "Invalid email format";
+     }
+   }
+    
+   if (empty($_POST["website"])) {
+     $website = "";
+   } else {
+     $website = test_input($_POST["website"]);
+     // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
+     if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
+       $websiteErr = "Invalid URL";
+     }
+   }
+
+   if (empty($_POST["comment"])) {
+     $comment = "";
+   } else {
+     $comment = test_input($_POST["comment"]);
+   }
+
+   if (empty($_POST["gender"])) {
+     $genderErr = "Gender is required";
+   } else {
+     $gender = test_input($_POST["gender"]);
+   }
+}
+
+function test_input($data) {
+   $data = trim($data);
+   $data = stripslashes($data);
+   $data = htmlspecialchars($data);
+   return $data;
+}
+?>
+
+<h2>PHP Form Validation Example</h2>
+<p><span class="error">* required field.</span></p>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+   Name: <input type="text" name="name" value="<?php echo $name;?>">
+   <span class="error">* <?php echo $nameErr;?></span>
+   <br><br>
+   E-mail: <input type="text" name="email" value="<?php echo $email;?>">
+   <span class="error">* <?php echo $emailErr;?></span>
+   <br><br>
+   Website: <input type="text" name="website" value="<?php echo $website;?>">
+   <span class="error"><?php echo $websiteErr;?></span>
+   <br><br>
+   Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
+   <br><br>
+   Gender:
+   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?>  value="female">Female
+   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?>  value="male">Male
+   <span class="error">* <?php echo $genderErr;?></span>
+   <br><br>
+   <input type="submit" name="submit" value="Submit">
+</form>
+
+<?php
+echo "<h2>Your Input:</h2>";
+echo $name;
+echo "<br>";
+echo $email;
+echo "<br>";
+echo $website;
+echo "<br>";
+echo $comment;
+echo "<br>";
+echo $gender;
+?>
+
+</body>
+</html>
+
+
+
+		
+	
+	   </div><!-- end container-->
+	
+	</div><!-- end band-->
+	
+	
+	
+	<div class="bands bottom">
+
+	    <footer class="container">
+		
+		<div class="four columns">
+			<h3 class="black">UUCG LINKS</h3>
+			<a class="white" href="http://www.uua.org">Unitarian Universalist Association</a><br>
+			<a class="white" href="http://www.tjdistrict.org/">Southeast District</a><br>
+			<a class="white" href="http://www.uusc.org/index.shtml">Unitarian Universalist Service Com</a>
+		</div><!--end eight-->
+
+		<div class="eight columns">
+			<h3 class="black">Ethnic Dining Guide</h3>
+			<p><em>By Diane Knight</em><br>
+                           Our own Diane Knight has written a guide to the ethnic restaurants in the Golden Isles.
+			   For a copy of the guide, <a class="white" href="http://www.uuacg.org/images/COMMUNITY_RESOURCES_Guide.pdf">click here.</a></p>
+		</div><!--end eight-->
+		
+		<div class="four columns">
+			<h1 class="Nurture"><a href="http://www.uua.org/love/279162.shtml"><img src="../images/NatureUU.svg" alt=""></a></h1>
+			<h2 class="Facebook"><a href="http://www.facebook.com/groups/184585768128/?id=10150311501293129"><img src="../images/FaceLogo.png" alt=""></a></h2>
+				
+	       </div><!--end eight-->
+		
+	   
+
+	  </footer><!-- end footer-->
+	
+	</div><!-- end band-->
+	
+	<div class="copyright">
+
+	    <footer class="container">
+		
+		
+	       
+	       <div class="sixteen columns">
+                      <p>Copyright &#169; 2013 Unitarian Universalists of Coastal GeorgiaBrunswick GA</p>
+		</div>
+	   
+
+	  </footer><!-- end footer-->
+	
+	</div><!-- end band-->
+	
+	<!-- JS
+	================================================== -->
+	<script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+	<script src="../javascripts/tabs.js"></script>
+	
+	<!-- Plugins -->
+	<script src="../javascripts/jquery.flexslider.js"></script>
+	
+	
+	<!-- instantiate js plugins -->
+	<script src="../javascripts/whatever.js"></script>
+	
+
+	
+<!-- End Document
+================================================== -->
+</body>
+</html>

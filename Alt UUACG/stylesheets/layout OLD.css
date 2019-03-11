@@ -1,0 +1,626 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+	#Baseline Corrections
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Typography (baseline corrections)
+================================================== */
+	
+	h1 { line-height: 49px; margin-bottom: 14px;}
+	h2 { line-height: 42px; margin-bottom: 7px; color: #708090;}
+	h3 { line-height: 35px; margin-bottom: 7px; color: #708090;}
+	h4 { line-height: 28px; margin-bottom: 7px; }
+	h5 { line-height: 21px; }
+
+	p { margin: 0 0 21px 0; }
+	p.lead { line-height: 28px; }
+        
+
+
+
+
+/*	Blockquotes  */
+	blockquote, blockquote p { line-height: 21px;  }
+	blockquote { margin: 0 0 21px; padding: 7px 20px 0 19px; }
+
+	hr { margin: 14px 0 28px; }
+
+/* #Lists
+================================================== */
+	ul, ol { margin-bottom: 21px; }
+	ul ul, ul ol,
+	ol ol, ol ul { margin: 7px 0 7px 30px; }
+	ul ul li, ul ol li,
+	ol ol li, ol ul li { margin-bottom: 7px; }
+	li { line-height: 21px; margin-bottom: 14px; }
+
+
+/* #Site Styles
+================================================== */
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*bands*/
+.bands {
+    background-color:#FFFFFF;
+}
+
+.bands.navigation {
+    background-color:#DCDCDC;
+}
+
+.bands.footer {
+    background-color:#FFFFFF;
+}
+
+.bands.bottom {
+    background-color:#708090;
+}
+
+/*heading*/
+header.main {
+    padding: 35px 0;
+}
+
+header h1.logo, object {
+    margin: 7px 0 0 0;
+    float: left;
+}
+
+header h1.logo, object a {
+    width: 252px;
+    height: 59px;
+    display: block;
+    background: url(../images/UUsymbol_252_59.svg) no-repeat 0 0;
+
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}
+
+/*navigation*/
+nav.primary ul,
+nav.primary ul li {
+    margin: 0px;
+}
+
+nav.primary select {
+    display: none;
+    width: 100%;
+    height: 28px;
+    margin: 14px 0;
+}
+
+nav.primary ul li {
+    display: inline;
+    float: left;
+    position: relative;
+}
+
+nav.primary ul li a {
+    display: inline-block;
+    line-height: 49px;
+    padding: 0 14px;
+    color: #708090;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+}
+
+nav.primary ul li a:hover {
+    background: #eeeeee;
+    cursor: pointer;
+}
+
+/*images*/
+figure {
+    padding: 6px;
+    border: 1px solid #eeeeee;
+    background: #fff;
+    line-height: 0px;
+}
+
+/*call outs*/
+
+
+/*Sub Menu*/
+nav.primary ul ul {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    
+    position: absolute;
+    z-index: 999;
+    background: #dcdcdc;
+    
+    height: 0px;
+    overflow: hidden;
+    
+    min-height: -width: 100%;
+    
+    -webkit-transition: opacity 0.4s ease-out;
+    -moz-transition: opacity 0.4s ease-out;
+    -0-transition: opacity 0.4s ease-out;
+    -ms-transition: opacity 0.4s ease-out;
+    transition: opacity 0.4s ease-out;
+    
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0.3);
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0.3);
+}
+
+nav.primary ul li span {
+    display: none;
+}
+
+nav.primary ul li:hover ul {
+    opacity: 10;
+    filter: alpha(opacity=100);
+    
+    height: auto;
+    overflow: auto;
+}
+
+nav.primary ul ul li {
+    float: none;
+    display: list-item;
+    border-bottom: 2px solid #eeeeee;
+    
+    
+}
+
+nav.primary ul ul li a{
+    display: block;
+    line-height: 35px;
+    text-transform: none;
+    white-space: nowrap;
+
+}
+
+nav.primary ul li:hover > a {
+    background: #eeeeee;
+}
+
+
+/* #images
+================================================== */
+
+.Whatis img {
+    width: 100%;
+}
+
+.About img {
+    width: 100%;
+}
+
+.Minister img {
+    width: 100%;
+}
+
+.RevPhillips img {
+    width: 100%;
+    
+}
+
+.UUSepia img {
+    width: 100%;
+}
+
+.Rapoport img {
+    width: 100%;
+    margin:5px;
+}
+
+.ContactPic img {
+    width: 100%;
+}
+
+.Map img {
+    width: 100%;
+}
+
+.Newcomer img {
+    width: 100%;
+}
+
+/* #video
+================================================== */
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* #Contact Form
+================================================== */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+form header {
+  margin: 0 0 20px 0; 
+}
+form header div {
+  font-size: 90%;
+  color: #999;
+}
+form header h2 {
+  margin: 0 0 5px 0;
+}
+form > div {
+  clear: both;
+  overflow: hidden;
+  padding: 1px;
+  margin: 0 0 10px 0;
+}
+form > div > fieldset > div > div {
+  margin: 0 0 5px 0;
+}
+form > div > label,
+legend {
+	width: 25%;
+  float: left;
+  padding-right: 10px;
+}
+form > div > div,
+form > div > fieldset > div {
+  width: 75%;
+  float: right;
+}
+form > div > fieldset label {
+	font-size: 90%;
+}
+fieldset {
+	border: 0;
+  padding: 0;
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password],
+textarea {
+	width: 100%;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password] {
+  width: 50%;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+textarea:focus {
+  outline: 0;
+  border-color: #4697e4;
+}
+
+
+/* #Calendar
+================================================== */
+
+a {
+    text-decoration: none;
+    color: #4c6c8c;
+     }
+ a:hover {
+    color: #839fbb;
+     }
+.calendar {
+            color: #444444;
+            font: 13px Arial, Helvetica, Geneva, sans-serif;
+            margin: 40px auto;
+            width: 90%;
+        }
+
+/*@group calendar*/
+.calendar {
+	overflow: hidden;
+}
+.cal_row {
+	overflow: hidden;
+}
+.cal_row > div {
+	width: 14%;
+	height: 100px;
+	float: left;
+	display: block;
+	background: #fff;
+	border-bottom: 1px solid #e6e6e6;
+	border-right: 1px solid #e6e6e6;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.cal_row > div:hover {
+	cursor: pointer;
+	background: #f9f9f9;
+}
+.day_names.cal_row > div {
+	background: none;
+	font-weight: bold;
+}
+.day_names.cal_row > div:hover {
+	cursor: inherit;
+}
+.cal_row > div:first-child,
+.cal_row > div:nth-child(7n+8) {
+	border-left: 1px solid #e6e6e6;
+}
+.day_names.cal_row > div {
+	height: auto;
+	text-align: center;
+	font-weight: bold;
+	padding-bottom: 5px;
+	border-right-color: #fff;
+	border-left-color: #fff;
+}
+.cal_row .has_event {
+	background: #f9f9f9;
+}
+.cal_row > div i {
+	padding: 2px 0 0 4px;
+	display: block;
+	color: #222;
+}
+.cal_row > .prev_month i,
+.cal_row > .next_month i {
+	color: #999;
+}
+.cal_row > div a {
+	font-size: 11px;
+	padding: 4px;
+	line-height: 6px;
+}
+
+@media only screen and (max-width: 600px) {
+	.day_names.cal_row > div span {
+		display: none;
+	}
+	.cal_row > div {
+		height: 60px;
+	}
+}
+/*@end calendar*/
+
+/* #text
+================================================== */
+
+p.main {
+    text-align:justify;
+}
+
+/* #footer
+================================================== */
+
+a.white:link {color: #ffffff;}
+a.white:visited {color: #ffffff;}
+
+
+.Nurture {
+    width: 216px;
+    height: 41px;
+    display: block;
+    margin: 5px 0;
+
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}
+
+.Facebook {
+    width: 216px;
+    height: 41px;
+    display: block;
+    margin: 5px 0;
+
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}
+
+.copyright {
+    background: #708090;
+    text-align: center;
+}
+
+/*
+ * jQuery FlexSlider v2.2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+
+
+/* Browser Resets
+*********************************/
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;}
+
+/* Icon Fonts
+*********************************/
+/* Font-face Icons */
+@font-face {
+	font-family: 'flexslider-icon';
+	src:url('fonts/flexslider-icon.eot');
+	src:url('fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/flexslider-icon.woff') format('woff'),
+		url('fonts/flexslider-icon.ttf') format('truetype'),
+		url('fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* FlexSlider Necessary Styles
+*********************************/
+.flexslider {width: 100%; margin: 0; padding: 0;}
+.flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {width: 100%; display: block;}
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "\0020"; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+html[xmlns] .slides {display: block;}
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+/*My own flexslider styles*/
+.flexslider {
+    margin: 21px 0;
+}
+
+.flex-control-nav {
+    width: 100%;
+    text-align: center;
+}
+
+.flex-control-nav li{
+    display: inline;
+    margin: 0 5px;
+}
+
+.flex-control-nav li a {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: #eeeeee;
+    border: 1px solid #eeeeee;
+    
+    cursor: pointer;
+    
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+    
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.flex-control-nav li a.active,
+.flex-control-nav li a:hover {
+    background: #DCDCDC;
+}
+
+
+/* #Page Styles
+================================================== */
+.black {
+    color: white;
+}
+
+
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+      
+        
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+           
+            nav.primary select {
+                display: block;
+            }
+            
+            nav.primary ul {
+                display: none;
+            }
+
+        }
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+            
+
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (min-width: 479px) {}
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/
+
+h2 {
+    font-family: Optima, serif;
+    font-weight: 500;
+    
+}
+
+h3 {
+    font-family: Optima, serif;
+    font-weight: 500;
+    
+}
+
